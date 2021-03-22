@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import Home from './Home';
+import Detail from './Detail';
+import Owned from './Owned';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      owned:[],
+		};
+    //this.savePoke = this.savePoke.bind(this);
+  }
+  
+
+  render(){
+    return(
+      <HashRouter>
+        {/* <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/detail">Detail</NavLink></li>
+        <li><NavLink to="/owned">Owned</NavLink></li> */}
+
+        <Route exact path="/" component={Home}/>
+        <Route path="/detail" component={Detail} savePoke={this.savePoke} />
+        <Route path="/owned" component={Owned}/>
+      </HashRouter>
+    )
+  }
 }
 
 export default App;
