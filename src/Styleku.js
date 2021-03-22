@@ -40,6 +40,7 @@ export const MenuKontener = styled.div`
         flex-direction: row;
         align:items:center;
         justify-content: center;
+        cursor: pointer;
     }
 
     @media (orientation:landscape){
@@ -115,6 +116,12 @@ export const PokeCount = styled.div`
     }
 `;
 
+const AniScan = keyframes`
+    0%{color: #fff2f2;}
+    58%{color: #ff3f3f;}
+    100%{color: #fff2f2;}
+`;
+
 export const Scanning = styled.div`
     background-color: #ff3f3f;
     color: #fff2f2;  
@@ -126,6 +133,10 @@ export const Scanning = styled.div`
     justify-content: center;
     align-items: center;
     font-size:2em;
+    animation-name: ${AniScan};
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
 
     span{
         font-size:2em;
@@ -217,6 +228,11 @@ export const BtnRelease = styled.div`
     background : none;
     display : flex;
     align-items: center;
+    cursor: pointer;
+
+    @media (orientation:landscape){
+        height : 10vw;
+    }
 `;
 
 export const Detailku = styled.div`

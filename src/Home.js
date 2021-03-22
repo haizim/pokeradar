@@ -101,7 +101,6 @@ const Home = () =>{
                                 </span>
                                 Rescan
                             </div>
-                            
                         </span>
                         <HashRouter>
                             <NavLink to="/Owned">
