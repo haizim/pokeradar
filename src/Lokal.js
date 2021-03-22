@@ -52,15 +52,18 @@ class Lokal extends Component{
     }
 
     pokeRelease = (pokeCall) => {
-        const pokeOld = JSON.parse(localStorage.getItem("myPoke"));
-        const pokeNew = pokeOld
-        .filter((pokeOld) => pokeOld.call !== pokeCall)
-        .map((filterPoke) => {
-            return filterPoke;
-        });
-        const countNew = parseInt(localStorage.getItem("countPoke"))-1;
-        localStorage.setItem("myPoke",JSON.stringify(pokeNew));
-        localStorage.setItem("countPoke",countNew);
+        if(window.confirm('Do you really gonna release '+pokeCall+'?')){
+            const pokeOld = JSON.parse(localStorage.getItem("myPoke"));
+            const pokeNew = pokeOld
+            .filter((pokeOld) => pokeOld.call !== pokeCall)
+            .map((filterPoke) => {
+                return filterPoke;
+            });
+            const countNew = parseInt(localStorage.getItem("countPoke"))-1;
+            localStorage.setItem("myPoke",JSON.stringify(pokeNew));
+            localStorage.setItem("countPoke",countNew);
+            alert("Goodbye "+pokeCall);
+        }
     }
     
 }
