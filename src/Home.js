@@ -8,7 +8,7 @@ let Local = new Lokal();
 
 const Home = () =>{
     const [pokes,setPokes] = useState([]);
-    const [udah,setUdah] = useState(false);
+    const [udah] = useState(false);
 
     const pokeScan = () => {
         let gqlQuery = `query pokemons($limit: Int, $offset: Int) {
@@ -94,7 +94,7 @@ const Home = () =>{
                         })
                     }
                     <MenuKontener>
-                        <a href="#">
+                        <span>
                             <div onClick={()=>pokeScan()}>
                                 <span className="material-icons">
                                     radar
@@ -102,7 +102,7 @@ const Home = () =>{
                                 Rescan
                             </div>
                             
-                        </a>
+                        </span>
                         <HashRouter>
                             <NavLink to="/Owned">
                                 <div>
