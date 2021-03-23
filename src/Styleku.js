@@ -71,7 +71,7 @@ const PokeAni = keyframes`
 export const PokeDetek = styled.div`
     top: ${props => props.atas+"vh"};
     left: ${props => props.kiri+"vw"};
-    width: 25vw;
+    width: 15vw;
     position: fixed;
     color: #ff3f3f;
     text-decoration: none;
