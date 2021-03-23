@@ -28,6 +28,7 @@ export const MenuKontener = styled.div`
     flex-direction: row;
     justify-content: space-around;
     height: 8vh;
+    z-index: 258;
 
     a{
         color: #fff2f2;
@@ -109,6 +110,7 @@ export const PokeCount = styled.div`
     justify-content: space-around;
     align-items: center;
     font-weight: bold;
+    z-index: 258;
 
     @media (orientation:landscape){
         left:45%;
