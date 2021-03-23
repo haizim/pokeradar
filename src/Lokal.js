@@ -5,7 +5,7 @@ class Lokal extends Component{
     pokeSave = (pokeName, img, tipe) => {
         let callName = prompt("Give "+pokeName+" name",pokeName);
         console.log("callName : "+callName);
-        const pokeOld = JSON.parse(localStorage.getItem("myPoke"));
+        
 
             if (callName == null){
                 alert("Whew, you let "+pokeName+" free")
@@ -21,6 +21,8 @@ class Lokal extends Component{
                     localStorage.setItem("myPoke",JSON.stringify(pokeNew))
                     localStorage.setItem("countPoke",countNew)
                 }else{
+                    const pokeOld = JSON.parse(localStorage.getItem("myPoke"));
+                    
                     if(pokeOld.filter(lama => lama.call === callName).length === 0 ){
                         const pokeNew = [
                                 ...pokeOld,
