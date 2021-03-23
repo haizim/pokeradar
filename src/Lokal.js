@@ -7,8 +7,6 @@ class Lokal extends Component{
         console.log("callName : "+callName);
         const pokeOld = JSON.parse(localStorage.getItem("myPoke"));
 
-        if(pokeOld.filter(lama => lama.call === callName).length === 0 ){
-
             if (callName == null){
                 alert("Whew, you let "+pokeName+" free")
             }else{
@@ -23,27 +21,27 @@ class Lokal extends Component{
                     localStorage.setItem("myPoke",JSON.stringify(pokeNew))
                     localStorage.setItem("countPoke",countNew)
                 }else{
-                    
-                    const pokeNew = [
-                            ...pokeOld,
-                            {
-                                "poke":pokeName, 
-                                "call":callName,
-                                "img":img,
-                                "type":tipe,
-                            }
-                        ];
-                    const countNew = parseInt(localStorage.getItem("countPoke"))+1;
-                    localStorage.setItem("myPoke",JSON.stringify(pokeNew))
-                    localStorage.setItem("countPoke",countNew)
-        
+                    if(pokeOld.filter(lama => lama.call === callName).length === 0 ){
+                        const pokeNew = [
+                                ...pokeOld,
+                                {
+                                    "poke":pokeName, 
+                                    "call":callName,
+                                    "img":img,
+                                    "type":tipe,
+                                }
+                            ];
+                        const countNew = parseInt(localStorage.getItem("countPoke"))+1;
+                        localStorage.setItem("myPoke",JSON.stringify(pokeNew))
+                        localStorage.setItem("countPoke",countNew)
+                    }else{
+                        alert("There's pokemon called "+callName+" in your bag!");
+                        this.pokeSave(pokeName, img, tipe);
+                    }
                 }
             }
 
-        }else{
-            alert("There's pokemon called "+callName+" in your bag!");
-            this.pokeSave(pokeName, img, tipe);
-        }
+       
         
     }
 
