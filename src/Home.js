@@ -25,7 +25,7 @@ const Home = () =>{
 
         let gqlVariables = {
             limit: Math.round(5*Math.random())+2,
-            offset: Math.round(258*Math.random()),
+            offset: Math.round(852*Math.random()),
         };
 
         setPokes([]);
@@ -83,7 +83,7 @@ const Home = () =>{
                                 <HashRouter>
                                     <NavLink to={"/detail/"+poke.name}>
                                         <PokeDetek atas={8+Math.random()*58} kiri={Math.random()*75} dele={Math.random()}>
-                                            <img src={poke.image} alt={poke.image} />
+                                            <img src={poke.image} alt={"img-"+poke.name} />
                                             {poke.name}
                                         </PokeDetek>
 

@@ -344,4 +344,5 @@ export const DetailContent = styled.div`
 
  export const DtlMove = styled.div`
     margin-bottom: 1rem;
+    min-height: 25vh;
  `;
