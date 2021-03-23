@@ -25,7 +25,7 @@ const Home = () =>{
 
         let gqlVariables = {
             limit: Math.round(5*Math.random())+2,
-            offset: Math.round(852*Math.random()),
+            offset: Math.round(1111*Math.random()),
         };
 
         setPokes([]);

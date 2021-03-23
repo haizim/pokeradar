@@ -171,7 +171,7 @@ export const PokekuKontener = styled.div`
     background-color : ${props => clrPrimer[props.tipe]};
     border-radius : .5rem;
     width: 95vw;
-    height : 25vw;
+    min-height : 25vw;
     display : flex;
     align-items: center;
     color : ${props => clrSekunder[props.tipe]};
@@ -182,7 +182,7 @@ export const PokekuKontener = styled.div`
     }
 
     @media (orientation:landscape){
-        height: 10vw;
+        min-height: 10vw;
         margin: 1rem 5vw;
         width: 58vw;
     }
@@ -191,10 +191,10 @@ export const PokekuKontener = styled.div`
 
 export const Pokeku = styled.div`
     padding: .5rem;
-    border-radius : .5rem 4rem 4rem .5rem;
+    border-radius : .5rem 5rem 5rem .5rem;
     background-color : ${props => clrSekunder[props.tipe]};
     width: 28vw;
-    height : 25vw;
+    height : 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -202,28 +202,29 @@ export const Pokeku = styled.div`
     align-items: center;
 
     img{
-        height:100%;
+        width:100%;
     }
 
     @media (orientation:landscape){
         width: 10vw;
-        height: 10vw;
+        
     }
 `;
 
 export const PokeName = styled.div`
     width : 75vw;
     padding: 1rem;
-    height : 25vw;
+    height : 100%;
 
     @media (orientation:landscape){
         padding: 2rem;
-        height : 10vw;
+        
     }
 `;
 
 export const BtnRelease = styled.div`
-    height : 25vw;
+    height : 100%;
+    min-height : 25vw;
     padding : 1rem;
     background : none;
     display : flex;
@@ -231,7 +232,7 @@ export const BtnRelease = styled.div`
     cursor: pointer;
 
     @media (orientation:landscape){
-        height : 10vw;
+        min-height: 10vw;
     }
 `;
 

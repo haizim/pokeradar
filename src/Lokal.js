@@ -4,7 +4,6 @@ class Lokal extends Component{
 
     pokeSave = (pokeName, img, tipe) => {
         let callName = prompt("Give "+pokeName+" name",pokeName);
-        console.log("callName : "+callName);
         
         if (callName == null){
             alert("Whew, you let "+pokeName+" free")
