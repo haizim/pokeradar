@@ -84,7 +84,7 @@ const Home = () =>{
                                     <NavLink to={"/detail/"+poke.name}>
                                         <PokeDetek atas={8+Math.random()*58} kiri={Math.random()*75} dele={Math.random()}>
                                             <img src={poke.image} alt={"img-"+poke.name} />
-                                            {poke.name}
+                                            {poke.name.replaceAll("-"," ")}
                                         </PokeDetek>
 
                                     </NavLink>

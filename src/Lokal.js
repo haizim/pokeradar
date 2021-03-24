@@ -6,7 +6,7 @@ class Lokal extends Component{
         let callName = prompt("Give "+pokeName+" name",pokeName);
         
         if (callName == null){
-            alert("Whew, you let "+pokeName+" free")
+            alert("Whew, you let "+pokeName.replaceAll("-"," ")+" free")
         }else{
             if(!localStorage.getItem("myPoke")){
                 const pokeNew = [{

@@ -64,7 +64,7 @@ const Detail = () => {
 			Local.pokeSave(poke,img,tipe);
 			setGoTo("/Owned");
 		} else{
-			alert("Oops, "+poke+" run away! ");
+			alert("Oops, "+poke.replaceAll("-"," ")+" run away! ");
 			setGoTo("/");
 		} 
 	}
@@ -98,7 +98,7 @@ const Detail = () => {
 						<img src={pokeDtl.sprites.front_default} alt={pokeDtl.sprites.front_default} />
 					</ImgDetail>
 					<DetailContent>
-						<h1>{pokemon} </h1>
+						<h1>{pokemon.replaceAll("-"," ")} </h1>
 							{
 								pokeDtl.types.map(tipe => {
 									return(
@@ -115,7 +115,7 @@ const Detail = () => {
 								pokeDtl.stats.map(stat => {
 									return(
 										<div key={stat.stat.name}>	
-												<h5>{stat.stat.name.replace("-"," ")}</h5> 
+												<h5>{stat.stat.name.replaceAll("-"," ")}</h5> 
 												<h2>{stat.base_stat}</h2>
 										</div>
 									)
@@ -133,7 +133,7 @@ const Detail = () => {
 						{
 							pokeDtl.moves.map(muv => {
 								return(
-									<BadgeType tipe={pokeDtl.types[0].type.name} key={muv.move.name}>{muv.move.name.replace("-"," ")}</BadgeType>
+									<BadgeType tipe={pokeDtl.types[0].type.name} key={muv.move.name}>{muv.move.name.replaceAll("-"," ")}</BadgeType>
 								)
 							})
 						}

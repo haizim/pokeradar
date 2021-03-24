@@ -71,7 +71,7 @@ const PokeAni = keyframes`
 export const PokeDetek = styled.div`
     top: ${props => props.atas+"vh"};
     left: ${props => props.kiri+"vw"};
-    width: 15vw;
+    width: 20vw;
     position: fixed;
     color: #ff3f3f;
     text-decoration: none;
@@ -79,6 +79,7 @@ export const PokeDetek = styled.div`
     flex-direction: column;
     align:items:center;
     justify-content: center;
+    text-transform: capitalize;
     
     img{
         width:100%;
