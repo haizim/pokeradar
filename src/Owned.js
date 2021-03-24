@@ -32,7 +32,7 @@ const Owned = () =>{
                                     {poke.call}  
                                 </h3>
                                 <p>
-                                    {poke.poke}
+                                    {poke.poke.replaceAll("-"," ")}
                                 </p>
                             </NavLink>
                         </PokeName>
